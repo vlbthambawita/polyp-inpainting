@@ -1,0 +1,5 @@
+#install.packages("psych",dependencies=TRUE)
+library(psych)
+library(dplyr)
+data = read.csv("Rating-polyps-questionnaire.csv")
+relevant_data <- select(data,4,6:11,13:18,20:25,27:32,34:39,41:46,48:53,55:60,62:67,69:73)
