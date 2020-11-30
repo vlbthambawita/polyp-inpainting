@@ -3,9 +3,11 @@ library(psych)
 library(dplyr)
 data = read.csv("Rating-polyps-questionnaire.csv")
 relevant_data <- select(data,4,6:11,13:18,20:25,27:32,34:39,41:46,48:53,55:60,62:67,69:73)
-alpha(relevant_data) #yields raw_alpha = 0.44 - not spectacular. 
+alpha(relevant_data) #yields raw_alpha = 0.44 - i.e. very low. 
 
 # Analyse questions separately
+# check.keys=TRUE lets R find the first principal component and 
+# reverse key items with negative loadings. (whatever that means)
 q1 <- relevant_data[1:6]
 alpha(q1) # raw_alpha = 0.36 + warnings. with check.keys: 0.82
 q2 <- relevant_data[7:12]
@@ -22,3 +24,6 @@ q7 <- relevant_data[37:42]
 alpha(q7) # raw_alpha = -6.5 + warnings. with check.keys: 0.81
 q8 <- relevant_data[43:48]
 alpha(q8) # raw_alpha = -4.1 + warnings. with check.keys: 0.93
+
+# Testing other measures
+omega(q1)
