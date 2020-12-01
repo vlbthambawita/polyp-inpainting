@@ -17,4 +17,19 @@ relevant_data = data.iloc[:,[3,5,6,7,8,9,10,12,13,14,15,16,17,
 print(relevant_data)
 
 q1 = relevant_data.iloc[:,0:6]
+q2 = relevant_data.iloc[:,6:12]
+q3 = relevant_data.iloc[:,12:18]
+q4 = relevant_data.iloc[:,18:24]
+q5 = relevant_data.iloc[:,24:30]
+q6 = relevant_data.iloc[:,30:36]
+q7 = relevant_data.iloc[:,36:42]
+q8 = relevant_data.iloc[:,42:48]
 print(cronbachs_alpha(q1))
+print(cronbachs_alpha(q2))
+print(cronbachs_alpha(q3))
+print(cronbachs_alpha(q4))
+print(cronbachs_alpha(q5))
+print(cronbachs_alpha(q6))
+print(cronbachs_alpha(q7))
+print(cronbachs_alpha(q8))
+print(cronbachs_alpha(relevant_data))
